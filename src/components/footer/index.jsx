@@ -1,9 +1,13 @@
 import React from 'react'
-import "./style.css"
+
+import "assets/allCss/all.css";
+import "assets/allCss/container.css";
+import "assets/allCss/font.css";
+import "./style.css";
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <div></div>
   )
 }
 

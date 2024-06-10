@@ -1,0 +1,178 @@
+.exchange-all__wrap {
+    display: flex;
+    margin-bottom: 24px;
+
+}
+
+.exchange-rate__cards {
+    width: 200px;
+    border-radius: 8px;
+    background-color: #1F1D2B;
+    padding: 16px 20px 16px 16px;
+    margin-right: 24px;
+}
+
+.exchange-rate__ip {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.dollar-icon {
+    background-color: #252836;
+    border-radius: 8px;
+    font-size: 30px;
+    text-align: center;
+    color: #9288E0;
+    padding: 5px 8px 0 8px;
+}
+
+.bookmark-icon {
+    color: #FFB572;
+}
+
+.user-icon {
+    color: #65B0F6;
+}
+
+.dollar-price__percents {
+    font-weight: 500;
+    font-size: 12px;
+    color: #50D1AA;
+}
+
+.percent2 {
+    color: #FF7CA3;
+}
+
+.arrow-top__icon {
+    font-size: 15px;
+    color: #50D1AA;
+    background-color: #2e5b4d;
+    border-radius: 50%;
+    padding: 3px 5px 0 4px;
+}
+
+.arrow-icon2 {
+    color: #FF7CA3;
+    background-color: #5e313f;
+}
+
+.dollar-price {
+    font-weight: 600;
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.dollar-total {
+    font-weight: 500;
+    font-size: 14px;
+    color: #ABBBC2;
+}
+
+.report-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: 8px;
+    background-color: #1F1D2B;
+    padding: 24px;
+    overflow-y: scroll;
+    height: 50vh;
+}
+
+.report-wrap::-webkit-scrollbar{
+    display: none;
+}
+
+.report-tif {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.report-if {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border: 1px solid #393C49;
+    border-radius: 8px;
+    color: #fff;
+    padding: 10px 14px 7px 14px;
+}
+
+.report-title {
+    font-weight: 600;
+    font-size: 20px;
+    color: #fff;
+}
+
+.filter-icon {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.report-menu__info {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    list-style: none;
+    margin-bottom: 16px;
+}
+
+.report-table__title {
+    width: 29%;
+    text-align: start;
+    color: #E0E6E9;
+}
+
+.report-table__content {
+    text-align: start;
+    color: #E0E6E9;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.client-menu {
+    width: 65%;
+}
+
+.table-status {
+    border-radius: 10px;
+    padding: 3px 5px;
+    text-align: center;
+}
+
+.status-completed {
+    background-color: #2e5b4d;
+    color: #50D1AA;
+}
+
+.status-preparing {
+    background-color: #363455;
+    color: #9290FE;
+}
+
+.status-pending {
+    background-color: #4C3B39;
+    color: #FFB572;
+}
+
+.table-ava {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 16px;
+}
+
+.client-info {
+    display: flex;
+    align-items: center;
+}
+
+.client-name {
+    width: 110px;
+}

@@ -1,0 +1,43 @@
+body {
+    font-family: 'Barlow';
+    background-color: #252836;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+/* .components-wrapper{
+    display: flex;
+    justify-content: space-between;
+} */
+
+.components-wrapper {
+    overflow: clip !important;
+}
+
+.inner-wrapper{
+    display: flex;
+}
+
+.pages-wrapper{
+    width: 100%;
+    padding: 24px 24px 0 24px;
+}
+
+.header-wrapper{
+    width: 100%;
+}

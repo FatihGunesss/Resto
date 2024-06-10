@@ -1,10 +1,28 @@
-import React from 'react'
-import "./style.css"
+import "assets/allCss/all.css";
+import "assets/allCss/container.css";
+import "assets/allCss/font.css";
+import "./style.css";
 
-const Header = () => {
+const Header = (className) => {
   return (
-    <div>Header</div>
-  )
-}
+    <div className="container">
+      <div className={className + " header"}>
+        <div className="header-tds">
+          <h1 className="header-title">Fatih Resto</h1>
+          <p className="header-desc">Wednesday, 29 May 2024</p>
+        </div>
 
-export default Header
+        <div>
+          <div className="search-icon"></div>
+          <input
+            className="header-search"
+            type="search"
+            placeholder="Search for food, coffe, etc.."
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Header;

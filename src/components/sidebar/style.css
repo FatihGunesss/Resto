@@ -1,0 +1,121 @@
+.sidebar-all__wrap{
+    width: 105px;
+}
+
+.sidebar-wrap__icons {
+    background-color: #1F1D2B;
+    text-align: center;
+    padding-top: 24px;
+}
+
+.sidebar-logo {
+    margin-bottom: 30px;
+} 
+
+.corner-up::after {
+    width: 10%;
+    content: url("assets/image/icons/üst-köşe.svg");
+    position: absolute;
+    top: -67px;
+    left: 53px;
+    color: white;
+}
+
+.corner-down::before {
+    content: url("assets/image/icons/alt-köşe.svg");
+    position: absolute;
+    top: 47px;
+    left: 33px;
+    color: aliceblue;
+}
+
+.home-icon img {
+    width: 100%;
+    text-align: center;
+}
+
+.nav-wrap {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: scroll;
+    height: 69vh;
+}
+
+.nav-wrap::-webkit-scrollbar{
+    display: none;
+}
+
+.nav-item {
+    list-style-type: none;
+    padding: 12px;
+    margin: 20px 12px 12px 12px;
+    margin-right: -4px;
+    padding: 30px 30px 30px 15px;
+}
+
+.nav-item:hover .back {
+    background-color: #EA7C69;
+}
+
+.nav-item:hover .back svg {
+    fill: #fff;
+}
+
+.back {
+    padding: 21px 21px 16px 21px;
+    border-radius: 8px;
+    transition: all ease 0.3s;
+}
+
+.back svg {
+    width: 20px;
+    height: 20px;
+    fill: #EA7C69;
+}
+
+.active-menu {
+    position: relative;
+    padding: 30px 30px 30px 15px;
+    background-color: #252836;
+    border-radius: 12px 0 0 12px;
+} 
+
+.active-menu:before {
+    content: "";
+    width: 26px;
+    height: 26px;
+    background-image: url("assets/image/icons/üst-köşe.svg");
+    position: absolute;
+    top: -24px;
+    right: 6px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.active-menu:after {
+    content: "";
+    width: 26px;
+    height: 26px;
+    background-image: url("assets/image/icons/üst-köşe.svg");
+    position: absolute;
+    bottom: -23px;
+    right: 7px;
+    transform: rotate(270deg);
+    background-repeat: no-repeat;
+    background-size: contain;
+} 
+
+.active-menu .back svg {
+    fill: #fff;
+}
+
+.active-menu .back {
+    background-color: #EA7C69;
+    box-shadow: 0 0 11px 4px rgba(234, 124, 105, 0.32);
+}
+
+.sidebar-logout{
+    margin-top: 50px;
+    padding-bottom: 26px;
+}
