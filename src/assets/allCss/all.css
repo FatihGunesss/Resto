@@ -31,13 +31,22 @@ li {
 
 .inner-wrapper{
     display: flex;
+
+
 }
 
 .pages-wrapper{
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
     width: 100%;
-    padding: 24px 24px 0 24px;
+    padding: 25px 25px 0 25px;
 }
 
 .header-wrapper{
+    width: 100%;
+}
+
+.basket-wrapper{
     width: 100%;
 }

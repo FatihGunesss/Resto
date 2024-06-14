@@ -19,7 +19,7 @@ import "assets/allCss/container.css";
 import "assets/allCss/font.css";
 import "./style.css";
 
-const Basket = ({paymentModal, setPaymentModal}) => {
+const Basket = ({ setPaymentModal }) => {
   const ordersData = [
     {
       id: 1,
@@ -143,7 +143,10 @@ const Basket = ({paymentModal, setPaymentModal}) => {
             <p className="total-price"> $ 21,03</p>
           </div>
         </div>
-        <Button onClick={() => setPaymentModal({open:true, data: {}})} title={"Continue to Payment"} />
+        <Button
+          onClick={() => setPaymentModal({ open: true, data: {  } })}
+          title={"Continue to Payment"}
+        />
       </div>
     </div>
   );

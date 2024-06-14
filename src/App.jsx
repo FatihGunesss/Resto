@@ -1,15 +1,19 @@
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
 
-import { Sidebar, Header, Footer, Basket } from "components";
-import { Home, About, Dashboard } from "pages";
+import { Sidebar, Header, Footer, Basket, ModalCheck } from "components";
+import { Home, About, Dashboard, Settings } from "pages";
 import { PaymentModal } from "components";
 
 function App() {
+  const location = useLocation();
   const [paymentModal, setPaymentModal] = useState({ open: false, data: {} });
+
   return (
     <div className="components-wrapper">
       <PaymentModal {...{ setPaymentModal, paymentModal }} />
+      <ModalCheck />
       <div
         onClick={() => setPaymentModal({ open: false, data: {} })}
         className={paymentModal.open ? "overlay opened" : "overlay"}
@@ -24,13 +28,15 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/discount" element={<About />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/settings" element={<Settings />} />
           </Routes>
         </div>
-        <div className="basket-wrapper">
-          <Basket {...{ paymentModal, setPaymentModal }} />
-        </div>
+        {location.pathname !== "/settings" && 
+          <div className="basket-wrapper">
+            <Basket {...{ paymentModal, setPaymentModal }} />
+          </div>
+        }
       </div>
-
       <Footer />
     </div>
   );

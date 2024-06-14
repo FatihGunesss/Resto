@@ -6,6 +6,7 @@ import { RiPaypalLine } from "react-icons/ri";
 import { CiWallet } from "react-icons/ci";
 import { IoIosArrowUp } from "react-icons/io";
 
+import { Back } from "assets/image/icons";
 import Food1 from "assets/image/food1.png";
 import Food2 from "assets/image/food2.png";
 import Food3 from "assets/image/food3.png";
@@ -13,12 +14,18 @@ import Food4 from "assets/image/food4.png";
 import Food5 from "assets/image/food5.png";
 import Food6 from "assets/image/food6.png";
 import Button from "components/button";
-
+import "assets/allCss/all.css";
+import "assets/allCss/container.css";
+import "assets/allCss/font.css";
 import "./style.css";
-import { Back } from "assets/image/icons";
+import ModalCheck from "components/modalCheck";
 
 const PaymentModal = ({ setPaymentModal, paymentModal }) => {
-
+  const [checkModalniOch, setCheckModalniOch] = useState({
+    open: false,
+    data: {},
+  });
+  const [activeMethod, setActiveMethod] = useState(1);
 
   const ordersData = [
     {
@@ -61,15 +68,25 @@ const PaymentModal = ({ setPaymentModal, paymentModal }) => {
 
   return (
     <div className="payment-modal">
+      <ModalCheck {...{ checkModalniOch, setCheckModalniOch }} />
       <div className={paymentModal.open ? "modal-inner show" : "modal-inner"}>
         <div className="left-side">
-          
           <div className="orders-wrap">
-            <p className="arrow-back" onClick={() => setPaymentModal({ open: false, data: {} })}>
+            <p
+              className="arrow-back"
+              onClick={() => setPaymentModal({ open: false, data: {} })}
+            >
               <Back />
             </p>
-            <h2 className="orders-confirmation">Confirmation</h2>
-            <p className="orders-number__modal">Orders #34562</p>
+            <div className="modal-confirmation__wrap">
+              <div className="modal-confirm__left">
+                <h2 className="orders-confirmation">Confirmation</h2>
+                <p className="orders-number__modal">Orders #34562</p>
+              </div>
+              <div className="modal-confirm__right">
+                <p className="modal-add">+</p>
+              </div>
+            </div>
             <span className="orders-basket__line"></span>
             <div className="orders-basket__wrap modal-basket__wrap">
               {ordersData.map((item, index) => (
@@ -90,7 +107,7 @@ const PaymentModal = ({ setPaymentModal, paymentModal }) => {
 
                   <div className="orders-basket__bottom">
                     <input
-                      className="orders-basket__input"
+                      className="orders-basket__input modal__input"
                       type="text"
                       placeholder="Order Note..."
                     />
@@ -125,21 +142,42 @@ const PaymentModal = ({ setPaymentModal, paymentModal }) => {
             <span className="orders-basket__line"></span>
             <h2 className="payment-basket__method-title">Payment Method</h2>
             <div className="payment-method__wrap">
-              <div className="payment-method-box payment-active">
+              <div
+                onClick={() => setActiveMethod(1)}
+                className={
+                  activeMethod === 1
+                    ? "payment-method-box payment-active"
+                    : "payment-method-box"
+                }
+              >
                 <span className="payment-method__icon">
                   <CiCreditCard1 />
                 </span>
                 <span className="payment-method__completed"></span>
                 <p className="payment-method">Credit Card</p>
               </div>
-              <div className="payment-method-box">
+              <div
+                onClick={() => setActiveMethod(2)}
+                className={
+                  activeMethod === 2
+                    ? "payment-method-box payment-active"
+                    : "payment-method-box"
+                }
+              >
                 <span className="payment-method__icon">
                   <RiPaypalLine />
                 </span>
                 <span className="payment-method__completed"></span>
                 <p className="payment-method">Paypal</p>
               </div>
-              <div className="payment-method-box">
+              <div
+                onClick={() => setActiveMethod(3)}
+                className={
+                  activeMethod === 3
+                    ? "payment-method-box payment-active"
+                    : "payment-method-box"
+                }
+              >
                 <span className="payment-method__icon">
                   <CiWallet />
                 </span>
@@ -191,8 +229,16 @@ const PaymentModal = ({ setPaymentModal, paymentModal }) => {
             </div>
 
             <div className="paymnet-btn__wrap">
-              <Button className="payment-btn1" title={"Cancel"}  onClick={() => setPaymentModal({ open: false, data: {} })}/>
-              <Button className="payment-btn2" title={"Confirm Payment"} />
+              <Button
+                className="payment-btn1"
+                title={"Cancel"}
+                onClick={() => setPaymentModal({ open: false, data: {} })}
+              />
+              <Button
+                onClick={() => setCheckModalniOch({ open: true, data: {} })}
+                className="payment-btn2"
+                title={"Confirm Payment"}
+              />
             </div>
           </div>
         </div>

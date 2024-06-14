@@ -1,0 +1,240 @@
+.settings-wrpper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.settings-back__left {
+    height: 84vh;
+    background-color: #1F1D2B;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.settings-info__wrapper-left {
+    background-color: #1F1D2B;
+}
+
+.settings-info__left {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 24px 68px 22px 24px;
+    transition: all ease 0.3s;
+    cursor: pointer;
+}
+
+.settings-info__left:hover {
+    background-color: #54353B;
+}
+
+.settings-info__left:hover .setting-info__title-left {
+    color: #EA7C69;
+}
+
+.settings-info__left:hover .settings-icon__left {
+    color: #EA7C69;
+}
+
+.settings-info__left::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -1px;
+    width: 0px;
+    border-radius: 30px;
+    height: 45px;
+    background-color: #EA7C69;
+    transition: all ease 0.2s;
+
+}
+
+.settings-info__active {
+    background-color: #54353B;
+}
+
+.settings-info__active.settings-info__left::after {
+    width: 5px;
+}
+
+.settings-info__active .setting-info__title-left {
+    color: #EA7C69;
+}
+
+
+
+.settings-info__active .settings-icon__left,
+.setting-info__title-left {
+    color: #EA7C69;
+}
+
+.settings-icon__left {
+    color: #ABBBC2;
+    font-size: 16px;
+    transition: all ease 0.3s;
+}
+
+.setting-info__title-left {
+    font-weight: 500;
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 4px;
+    transition: all ease 0.3s;
+}
+
+.setting-info__desc-left {
+    font-weight: 400;
+    font-size: 12px;
+    color: #ABBBC2;
+}
+
+
+
+/*Right style*/
+.settings-wrapper__right {
+    width: 76%;
+    height: 84vh;
+    border-radius: 8px;
+    background-color: #1F1D2B;
+}
+
+.settings-info__wrapper {
+    padding: 24px;
+}
+
+.settings-add__food{
+    display: flex;
+    align-items: center;
+}
+
+.settings-add__title{
+    font-weight: 500;
+    color: #fff;
+}
+
+.settings-add__catigories{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: transparent;
+    border: 1px solid #393C49;
+    border-radius: 8px;
+    padding: 14px;
+    color: #fff;
+}
+
+.settings-add__catigories p{
+    font-size: 20px;
+}
+
+.settings-add__food {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.settings-food__cards-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    justify-content: space-between; 
+    overflow-y: scroll;
+    height: 50vh;
+}
+
+.settings-food__cards-wrapper::-webkit-scrollbar{
+    display: none;
+}
+
+.settings-add__box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 99%;
+    border: 2px dashed #EA7C69;
+    border-radius: 8px;
+    color: #EA7C69;
+}
+
+.settings-add__plus{
+    font-size: 26px;
+    margin-bottom: 22px;
+}
+
+.settings-food__card {
+    width: 99%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1f1d2b;
+    padding: 21px 0 0 0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all ease 0.3s;
+    border: 1px solid #565464;
+}
+
+.settings-food__image {
+    width: 127px;
+    height: 127px;
+    border-radius: 50%;
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+.setting-food__cards-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.settings-food__name{
+    width: 65%;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.settings-food__desc{
+    color: #ABBBC2;
+    margin-bottom: 16px;
+}
+
+.settings-food__edit{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    background-color: #54353B;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+}
+
+.setting-food__edit-dish{
+    margin-top: 15px;
+    color: #EA7C69;
+}
+
+.settings-button__wrapper{
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.settings-btn1 {
+    width: 165px;
+    background-color: transparent;
+    border: 1px solid #EA7C69;
+    color: #EA7C69;
+    box-shadow: none;
+}
+
+.settings-btn2 {
+    width: 165px;
+}

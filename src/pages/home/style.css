@@ -39,42 +39,7 @@
     animation: rotating 14s linear infinite;
 }
 
-/* Menu */
-.item-menu__wrap {
-    display: flex;
-}
 
-.item-menu {
-    list-style-type: none;
-    margin-bottom: 15px;
-    position: relative;
-}
-
-.item-menu:hover .item-title {
-    color: #EA7C69;
-}
-
-.item-title {
-    color: #fff;
-    cursor: pointer;
-    margin-right: 32px;
-    transition: all ease 0.4s;
-}
-
-.item-title:hover {
-    color: #EA7C69;
-}
-
-.active::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -16px;
-    border-radius: 12px;
-    background-color: #EA7C69;
-    padding: 2px 23px;
-    z-index: 3;
-}
 
 .item-line {
     background-color: #EA7C69
@@ -96,7 +61,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 58px;
+    margin-bottom: 20px;
 }
 
 .food-cards__title {
@@ -123,7 +88,7 @@
     justify-items: center;
     align-items: center;
     overflow-y: scroll;
-    height: 61vh;
+    height: 67vh;
 }
 
 .food-cards__wrap::-webkit-scrollbar{

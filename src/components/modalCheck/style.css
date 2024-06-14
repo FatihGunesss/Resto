@@ -1,0 +1,114 @@
+.check-overlay {
+    z-index: 101;
+    background-color: #000000b7;
+    position: absolute;
+    height: 0;
+    width: 0;
+    opacity: 0;
+    transition: all ease 0.1s;
+}
+
+.opened-check {
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+}
+
+.modal-check {
+    position: absolute;
+}
+
+.modal-check__wrapper {
+    display: none;
+    position: fixed;
+    z-index: 102;
+    color: #000;
+    background-color: #fff;
+    opacity: 0;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    transition: all ease 0.3s;
+    padding: 40px;
+}
+
+.modal-check__wrapper::after{
+    content: url("assets/image/triangle.svg");
+    position: absolute;
+    bottom: -9px;
+    left: -5px;
+    width: 100%;
+}
+
+.modal-check__wrapper::before{
+    content: url("assets/image/triangle.svg");
+    position: absolute;
+    top: -9px;
+    left: 5px;
+    transform: rotate(180deg);
+    width: 100%;
+}
+
+.show-check {
+    display: block;
+    width: 22vw;
+    height: 65vh;
+    opacity: 1;
+}
+
+.modal-check__resto-name{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.modal-check__table-and__data{
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+    padding: 5px;
+}
+
+.modal-check__td{
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.modal-check__line{
+    border-top: 1px dashed #000;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.modal-check__food-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 140%;
+    margin-bottom: 10px;
+}
+
+.model-check__sale-wrapper{
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.model-check__pey__wrapper{
+    text-align: center;
+}
+
+
+.check-close__wrapper {
+    display: flex;
+    justify-content: end;
+}
+
+.check-close {
+    cursor: pointer;
+    font-size: 24px;
+}

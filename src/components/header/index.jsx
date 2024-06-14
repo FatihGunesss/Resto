@@ -1,9 +1,12 @@
+import { useLocation } from "react-router-dom";
+
 import "assets/allCss/all.css";
 import "assets/allCss/container.css";
 import "assets/allCss/font.css";
 import "./style.css";
 
 const Header = (className) => {
+  const location = useLocation();
   return (
     <div className="container">
       <div className={className + " header"}>
@@ -12,7 +15,8 @@ const Header = (className) => {
           <p className="header-desc">Wednesday, 29 May 2024</p>
         </div>
 
-        <div>
+        {location.pathname !== "/settings" &&
+          <div className="header-search__info">
           <div className="search-icon"></div>
           <input
             className="header-search"
@@ -20,6 +24,7 @@ const Header = (className) => {
             placeholder="Search for food, coffe, etc.."
           />
         </div>
+        }
       </div>
     </div>
   );
