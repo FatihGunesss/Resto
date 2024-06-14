@@ -20,6 +20,8 @@ import "assets/allCss/font.css";
 import "./style.css";
 
 const Basket = ({ setPaymentModal }) => {
+  const [actived, setActived] = useState(1);
+  
   const ordersData = [
     {
       id: 1,
@@ -58,7 +60,7 @@ const Basket = ({ setPaymentModal }) => {
       img: Food6,
     },
   ];
-  const [actived, setActived] = useState(1);
+
   return (
     <div className="container">
       <div className="orders-wrap">
